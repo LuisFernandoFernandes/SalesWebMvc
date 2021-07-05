@@ -7,7 +7,7 @@ using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Services
 {
-    public class SellerService 
+    public class SellerService
     {
         private readonly SalesWebMvcContext _context;
 
@@ -23,7 +23,6 @@ namespace SalesWebMvc.Services
 
         public void Insert(Seller obj)
         {
-            obj.Department = _context.Department.First();
             _context.Add(obj);
             _context.SaveChanges();
         }
